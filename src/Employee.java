@@ -40,10 +40,14 @@ public class Employee {
     @Override
     public String toString() {
         return
-                "name='" + name + '\'' +
-                ", sallary=" + sallary +
-                ", workHours=" + workHours +
-                ", hireYear=" + hireYear +
-                '}';
+                "Name : " + name + '\n' +
+                        "Sallary : " + sallary + '\n' +
+                        "Working Hour :" + workHours + '\n' +
+                        "Hire Year :" + hireYear + '\n' +
+                        "Tax : " + calculatedTax() + '\n' +
+                        "Bonus : " + calculatedBonus() + '\n' +
+                        "Sallary Increase : " + raiseSallary() +'\n' +
+                        "Tax + Bonus : " + (sallary + calculatedBonus() - calculatedTax()) + '\n' +
+                        "Total Sallary : " + (sallary + calculatedBonus() + raiseSallary());
     }
 }
